@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectContext3DAPI", "DirectContext3DAPI\DirectContext3DAPI.csproj", "{8B1E2A9A-F161-463B-B9CA-57DF9280FD6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDKExample", "SDKExample\SDKExample.csproj", "{79FF5614-2FBD-4C77-884C-191A186138F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B1E2A9A-F161-463B-B9CA-57DF9280FD6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B1E2A9A-F161-463B-B9CA-57DF9280FD6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B1E2A9A-F161-463B-B9CA-57DF9280FD6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B1E2A9A-F161-463B-B9CA-57DF9280FD6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79FF5614-2FBD-4C77-884C-191A186138F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79FF5614-2FBD-4C77-884C-191A186138F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79FF5614-2FBD-4C77-884C-191A186138F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79FF5614-2FBD-4C77-884C-191A186138F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0A9807A-4D7C-4E45-824C-E2AC51BF7D5B}
+	EndGlobalSection
+EndGlobal
