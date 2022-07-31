@@ -58,7 +58,6 @@ namespace DirectContext3DAPI
             try
             {
                 Document document = commandData.Application.ActiveUIDocument.Document;
-                Application.ClearMeshGraphics(document);
                 Application.ShowMeshGraphics(document);
                 return Result.Succeeded;
             }
