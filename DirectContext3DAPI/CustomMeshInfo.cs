@@ -9,6 +9,7 @@ namespace DirectContext3DAPI
 {
     public class MeshCube
     {
+        //https://github.com/varolomer/DirectContext3DAPI/blob/master/DirectContext3DAPI/Assets/SS/MeshCube.png
         public int VertexBufferCount;
         public int NumTriangles;
         public int EdgeCount;
@@ -60,6 +61,19 @@ namespace DirectContext3DAPI
                 new XYZ(a,0,a), //22
                 new XYZ(a,a,a), //23
             };
+
+            #region Important Note About Normals
+            //You need to understand, that the vertex is not just a point in the space, it's rather a set of distinct properties, connected into one object.
+            //Those properties include position, but may also have normal, color, texture coordinates, etc. In 3D graphics you'll often need two or more
+            //vertices placed in the same location, but with different normals, colors or texture coords. And this is the case with your cube - the cube in
+            //general has just 8 corners, but all of those corners connects 3 sides and every side has different normal, so it's the reason why all example
+            //cubes you've seen had 24 vertices. In fact your cube is very similar to a sphere, with very simple geometry, in a way that every vertex on the
+            //sphere has just one normal and the lighting is smooth around the vertex. In the cube you need to shade every side as a flat surface, so all vertices
+            //that build that side needs the same normal. It may be simpler to understand if you look at the cube as a 6 distinct quads and create all those quads
+            //with separate vertices.
+
+            //Reference: Kolenda
+            #endregion
 
             Normals = new List<XYZ>()
             {
