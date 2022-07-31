@@ -9,6 +9,7 @@ namespace DirectContext3DAPI
 {
     public class MeshCube
     {
+        // https://github.com/varolomer/DirectContext3DAPI/blob/master/DirectContext3DAPI/Assets/SS/MeshCube.png
         public int VertexBufferCount;
         public int NumTriangles;
         public int EdgeCount;
