@@ -1,24 +1,18 @@
-﻿using System;
+﻿using Autodesk.Revit.ApplicationServices;
+using Autodesk.Revit.DB;
+using Autodesk.Revit.DB.DirectContext3D;
+using Autodesk.Revit.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Autodesk.Revit.UI;
-using Autodesk.Revit.DB;
-using Autodesk.Revit.ApplicationServices;
-using Autodesk.Revit.DB.DirectContext3D;
 
 namespace DirectContext3DAPI
 {
-    // A class that brings together all the data and rendering parameters that are needed to draw one sequence
-    // of primitives (e.g., triangles) with the same format and appearance.
-    class RenderingPassBufferStorage
+    public class CustomBufferStorage
     {
         public DisplayStyle DisplayStyle { get; set; }
-
-        //Geometry Info
-        public List<MeshInfo> Meshes { get; set; }
-        public List<IList<XYZ>> EdgeXYZs { get; set; }
 
         //Counts
         public int PrimitiveCount { get; set; }
@@ -35,16 +29,9 @@ namespace DirectContext3DAPI
         public EffectInstance EffectInstance { get; set; }
 
 
-        //VertexFormatBits is not to be confused with VertexFormat. The latter type of object is
-        //associated with low-level graphics functionality and may become invalid. VertexFormat is
-        //needed to submit a set of vertex and index buffers for rendering (see Autodesk::Revit::DB::DirectContext3D::DrawContext).
-
-
-        public RenderingPassBufferStorage(DisplayStyle displayStyle)
+        public CustomBufferStorage(DisplayStyle displayStyle)
         {
             DisplayStyle = displayStyle;
-            Meshes = new List<MeshInfo>();
-            EdgeXYZs = new List<IList<XYZ>>();
         }
 
         /// <summary>
@@ -68,7 +55,5 @@ namespace DirectContext3DAPI
 
             return false;
         }
-
-
     }
 }

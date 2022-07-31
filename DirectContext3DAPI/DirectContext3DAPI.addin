@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Assembly>DirectContext3DAPI.dll</Assembly>
+		<ClientId>898bd7c1-fda1-4793-b6b9-b11ba1c29fd1</ClientId>
+		<FullClassName>DirectContext3DAPI.CommandDuplicateGraphics</FullClassName>
+		<Text>Create My DirectContext3D graphics</Text>
+		<Description>Select elements whose graphics should be redrawn using DirectContext3D.</Description>
+		<VisibilityMode>AlwaysVisible</VisibilityMode>
+		<LanguageType>Unknown</LanguageType>
+		<VendorId>GenFusions</VendorId>
+	</AddIn>
+	<AddIn Type="Command">
+		<Assembly>DirectContext3DAPI.dll</Assembly>
+		<ClientId>ec91b572-01d9-4faf-b979-13a595df358c</ClientId>
+		<FullClassName>DirectContext3DAPI.CommandClearExternalGraphics</FullClassName>
+		<Text>Clear My DirectContext3D graphics</Text>
+		<Description>Remove external graphics.</Description>
+		<VisibilityMode>AlwaysVisible</VisibilityMode>
+		<LanguageType>Unknown</LanguageType>
+		<VendorId>GenFusions</VendorId>
+	</AddIn>
+	<!--Show custom mesh-->
+	<AddIn Type="Command">
+		<Assembly>DirectContext3DAPI.dll</Assembly>
+		<ClientId>097699f7-d880-4c15-bc67-d503a64255da</ClientId>
+		<FullClassName>DirectContext3DAPI.CommandShowMesh</FullClassName>
+		<Text>Show Custom Mesh</Text>
+		<Description>Displays a custom mesh from an obj or sat file.</Description>
+		<VisibilityMode>AlwaysVisible</VisibilityMode>
+		<LanguageType>Unknown</LanguageType>
+		<VendorId>GenFusions</VendorId>
+	</AddIn>
+	<AddIn Type="Command">
+		<Assembly>DirectContext3DAPI.dll</Assembly>
+		<ClientId>7415c3be-b1fd-4eca-9dbf-d63be405232f</ClientId>
+		<FullClassName>DirectContext3DAPI.CommandClearMesh</FullClassName>
+		<Text>Clear Custom Mesh</Text>
+		<Description>Remove custom mesh graphics.</Description>
+		<VisibilityMode>AlwaysVisible</VisibilityMode>
+		<LanguageType>Unknown</LanguageType>
+		<VendorId>GenFusions</VendorId>
+	</AddIn>
+
+	<!--IExternal Application-->
+	<AddIn Type="Application">
+		<Name>DuplicateGraphics</Name>
+		<Assembly>DirectContext3DAPI.dll</Assembly>
+		<ClientId>f3cb74d5-97ac-44a1-9a42-109897bbe758</ClientId>
+		<FullClassName>DirectContext3DAPI.Application</FullClassName>
+		<VendorId>GenFusions</VendorId>
+		<VendorDescription>GenFusions</VendorDescription>
+	</AddIn>
+</RevitAddIns>
