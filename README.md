@@ -3,12 +3,12 @@
 # Revit External Graphics
 ![alt text](https://github.com/varolomer/RevitWPF/blob/master/RevitWPF/Assets/Github/BatchWallExportProgress.gif)
 
-This library utilizes Revit's External Event architecture to be able to develop responsive UIs. Furthermore, the library provides the chance to pass information from UI Thread to Revit thread and vice versa using the Dispatcher Object. To be able to pass the Revit External event and Event Handler from External Application to UI Thread a wrapper abstract class is created which implements IExternalEventHandler.
+This library utilizes Revit's DirectContext3D API to be able to flush Vertex and Index Buffers to Revit, in order to draw external graphics to Revit Canvas. The solution contains Autodesk's RevitSDK sample for DirectContext3D but also contains my basic example as a tutorial code. 
+
+# Vertex and Index Buffers
+Understanding how Mesh structure works and how they are representedin Vertex and Index Buffers are the backbone of this API. Even if a user is not familiar with the low-level operations of the buffers, at least a basic understanding of what these buffers mean would help significantly to utilize the API.
+![alt text](https://github.com/varolomer/DirectContext3DAPI/blob/master/DirectContext3DAPI/Assets/SS/MeshCube.png)
 
 # Diffuse, Ambient and Specular Colors
+The colour maps effects how the graphics are display in the viewport. Especially, in shaded views normal vectors of the vertices are extremely important to properly render the shadings.
 ![alt text](https://github.com/varolomer/DirectContext3DAPI/blob/master/DirectContext3DAPI/Assets/Github/FaceMaps.gif)
-
-To be able to have a responsive UI which works even when while Revit is busy, the UI is created in a separate thread. For communication between UI and Revit, the dispatcher object is invoked. While the UI thread is being shut down, all the ExternalEvents and handlers are disposed.
-
-# Attribution
-This library is based on a WPF example from mitevpi. Most of the credit goes there. First, I have re-written the library as a tutorial but then I have improved and re-implemented some points that was not working for me like adding the interlocking mechanism to easily pass the desired commands from UI Thread to Revit External Event.
