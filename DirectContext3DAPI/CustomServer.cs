@@ -161,7 +161,7 @@ namespace DirectContext3DAPI
             {
                 XYZ normal = customMesh.Normals[index];
 
-                vertexStream.AddVertex(new VertexPositionNormalColored(vertex, normal, new ColorWithTransparency(204,153,33,0)));
+                vertexStream.AddVertex(new VertexPositionNormalColored(vertex, normal, new ColorWithTransparency((byte)m_random.Next(0, 255), (byte)m_random.Next(0, 255), (byte)m_random.Next(0, 255), 0)));
 
                 index++;
             }
@@ -200,9 +200,9 @@ namespace DirectContext3DAPI
 
             //https://bassemtodary.wordpress.com/2013/04/13/ambient-diffuse-specular-and-emissive-lighting/
             m_FaceBufferStorage.EffectInstance.SetColor(new Color(0, 255, 0));
-            m_FaceBufferStorage.EffectInstance.SetEmissiveColor(new Color(255, 0, 0));
-            m_FaceBufferStorage.EffectInstance.SetSpecularColor(new Color(0, 0, 255));
-            m_FaceBufferStorage.EffectInstance.SetAmbientColor(new Color(255, 255, 0));
+            m_FaceBufferStorage.EffectInstance.SetEmissiveColor(new Color((byte)m_random.Next(0,255), (byte)m_random.Next(0, 255), (byte)m_random.Next(0, 255)));
+            m_FaceBufferStorage.EffectInstance.SetSpecularColor(new Color((byte)m_random.Next(0, 255), (byte)m_random.Next(0, 255), (byte)m_random.Next(0, 255)));
+            m_FaceBufferStorage.EffectInstance.SetAmbientColor(new Color((byte)m_random.Next(0, 255), (byte)m_random.Next(0, 255), (byte)m_random.Next(0, 255)));
 
 
 

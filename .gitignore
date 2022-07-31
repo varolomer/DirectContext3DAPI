@@ -127,6 +127,9 @@ $tf/
 # Guidance Automation Toolkit
 *.gpState
 
+# Photoshop Presentation Files
+*.psd
+
 # ReSharper is a .NET coding add-in
 _ReSharper*/
 *.[Rr]e[Ss]harper

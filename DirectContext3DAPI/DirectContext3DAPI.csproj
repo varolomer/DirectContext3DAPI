@@ -66,10 +66,13 @@
     <Compile Include="RevitElementDrawingServer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Github\Banner.png" />
+    <Content Include="Assets\Github\FaceMaps.gif" />
     <Content Include="Assets\SS\MeshCube.png" />
     <Content Include="Assets\SS\VertexFormat.PNG" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Github\Banner.psd" />
     <None Include="DirectContext3DAPI.addin">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
